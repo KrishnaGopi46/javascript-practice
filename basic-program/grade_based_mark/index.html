@@ -1,0 +1,40 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greater than 10</title>
+</head>
+<body>
+
+
+<script>
+
+//Check the number grade based mark
+//This is used for ----nested if---- contition
+
+let num=prompt("Enter number");
+if(num>=50){
+	if(num>=90 && num<=100){
+		document.write("Your Grade is 'O'(90-100)");
+	}
+	if(num>=80 && num<=89){
+		document.write("Your Grade is 'A+'(80-89)");
+	}
+	if(num>=70 && num<=79){
+		document.write("Your Grade is 'A'(70-79)");
+	}
+	if(num>=60 && num<=69){
+		document.write("Your Grade is 'B+'(60-69)");
+	}
+	if(num>=50 && num<=59){
+		document.write("Your Grade is 'B'(50-59)");
+	}
+}
+else{
+	document.write("Your Grade is R/A(<40)");
+}
+
+</script>
+
+</body>
+</html>
