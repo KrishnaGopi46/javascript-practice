@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested looping</title>
+</head>
+<body>
+
+
+<script>
+<!-------star segements----->
+	for (a=1;a<=10;a++){
+		for (b=1;b<=10-a;b++){
+		document.write("*");
+	}
+		document.write("<br>");
+	}
+		
+	for (a=1;a<=10;a++){
+		for (b=1;b<=a;b++){
+		document.write("*");
+	}
+		document.write("<br>");
+	} 
+	
+<!-------------------------ABCD method------------------------>
+	for (a=65;a<=69;a++){
+		for(b=65;b<=a;b++){
+		document.write(String.fromCharCode(b));
+		}
+		document.write("<br>");
+	}
+	
+	document.write("<br><br>");
+<!-----------triangel method---------------------->
+	
+	for (a=1;a<=5;a++){
+		for (b=1;b<=a;b++){
+		document.write(a);
+	}
+		document.write("<br>");
+	} 
+	
+	document.write("<br><br>");
+	
+	for (a=1;a<=6;a++){
+		for (b=1;b<=6-a;b++){
+		document.write(b);
+	}
+		document.write("<br>");
+	} 
+	
+</script>
+
+
+
+</body>
+</html>
