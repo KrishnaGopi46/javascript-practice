@@ -1,1 +1,32 @@
-dwd
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pyramid method</title>
+</head>
+<body>
+
+
+<script>
+
+//pyramit method
+//This is used for ----nested if---- contition
+
+		for(i=65;i<=73;i++){
+            for(k=72;k>=i;k--){
+                document.write("&nbsp");
+               }
+            for(j=65;j<=i;j++){
+               if(i%2==0){
+				continue;
+               }
+              document.write(String.fromCharCode(j));
+            }
+            document.write("<br>");
+        }
+		
+
+</script>
+
+</body>
+</html>
