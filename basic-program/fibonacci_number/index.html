@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum of a nuumber</title>
+</head>
+<body>
+
+
+<script>
+
+//..................sum of a number
+		//543 nu kudutha 5+4+3=12 nu varanum
+		
+	
+	var i=parseInt(prompt("Enter the number"));
+	var k=0;
+		while(i>0){
+			let rev=(i%10);
+				i=(i-rev)/10;
+				k+=rev;
+		}
+		document.write(k);
+	
+</script>
+
+
+
+</body>
+</html>
