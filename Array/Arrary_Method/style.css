@@ -1,0 +1,20 @@
+table{
+	border-color:red;
+	width:100%;
+	border-collapse:collapse;
+	border:3px solid gray;
+	
+}
+th{
+	padding:1rem;
+	height:10vh;
+	border:3px solid gray;
+	color:white;
+	background-color:lightgreen;
+}
+td{
+	border:2px solid gray;
+	padding:1rem;
+	font-size:1.2rem;
+	font-weight:600;
+}
