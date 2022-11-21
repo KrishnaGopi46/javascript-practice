@@ -9,9 +9,9 @@
 <body>
 
 <script>
-
+	const time=new Date();
 	function welcome(){
-		document.write("Hello world");
+		document.write(time.toLocaleDateString() + "Hello world");
 		document.write("<br>");
 	}
 	setInterval(welcome,3000);

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>list_create</title>
+</head>
+<body>
+	<button onclick="myfunction()">CLICK</button>
+	<h1 id="gopi">hello</h1>
+<script>
+	const hed=document.getElementById("gopi");
+	
+	function myfunction(){
+	
+	let unorderedlist=document.createElement('ul');
+	hed.appendChild(unorderedlist);
+	
+
+	let list1=document.createElement("li");
+	list1.textContent="Gopi";
+	unorderedlist.appendChild(list1);
+	
+	let list2=document.createElement("li");
+	list2.textContent="karthi";
+	list1.appendChild(list2);
+	
+	let list3=document.createElement("li");
+	list3.textContent="mani";
+	list2.appendChild(list3);
+	
+	}
+
+	
+
+		
+	
+
+</script>
+</body>
+</html>
