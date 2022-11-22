@@ -42,12 +42,12 @@
          connectedflights:1,
         }
 	];  
-	let a=[];
-	passengers.forEach((name)=>{
 	
-		a.push(name.passengername);
-	});
-	console.log(a);
+	passengers.sort(function(a,b){
+	return a.connectedflights - b.connectedflights});
+	
+	console.log(passengers);
+	
 	
 </script>
 
