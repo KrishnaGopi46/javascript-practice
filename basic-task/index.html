@@ -13,73 +13,88 @@
 <script>
 
 		//Assignment operator(=,+=,-=)
+	<!-- <!--  -->
+	  var a=3,
+		b=9,
+		a=b,
+		b=2
+	console.log(a);
+	console.log(b);
 	
-	<!-- var a=3, -->
-		<!-- b=9, -->
-		<!-- a=b, -->
-		<!-- b=2 -->
-	<!-- console.log(a); -->
-	<!-- console.log(b); -->
+	var i=5;
+	<!-- <!-- console.log(i+=2); --> (i=i+2) -->
+	console.log(i-=2);
+	console.log(i+=i);
+	console.log(i-=i);
 	
-	<!-- var i=5; -->
-	<!-- console.log(i+=2); --> (i=i+2)
-	<!-- console.log(i-=2); -->
-	<!-- console.log(i+=i); -->
-	<!-- console.log(i-=i); -->
+		<!-- //Arithematic operator(+,-,/,*,%,**) -->
 	
-		//Arithematic operator(+,-,/,*,%,**)
+	var a=10,
+		b=5,
+		c=2,
+		d=4
+		f=(a+c)-(a/b)
+	console.log(f);
+	console.log(a%b);
+	console.log(c**d);
+	console.log(b*c);
 	
-	<!-- let a=10, -->
-		<!-- b=5, -->
-		<!-- c=2, -->
-		<!-- d=4 -->
-		<!-- f=(a+c)-(a/b) -->
-	<!-- console.log(f); -->
-	<!-- console.log(a%b); -->
-	<!-- console.log(c**d); -->
-	<!-- console.log(b*c); -->
+	//pre,post
+	console.log(++c);
+	console.log(c++);
+	console.log(c);
+	console.log(c**c);
 	
-	<!-- //pre,post -->
-	<!-- console.log(++c); -->
-	<!-- console.log(c++); -->
-	<!-- console.log(c); -->
-	<!-- console.log(c**c); -->
-	
-		//comparision operator(==,===,!=,!==,<,>,<=,>=,?)
+		<!-- //comparision operator(==,===,!=,!==,<,>,<=,>=,?) -->
 		
-	<!-- let a=10, -->
-		<!-- b=5, -->
-		<!-- c=10, -->
-		<!-- d="5"; -->
-		<!-- f="five" -->
-	<!-- console.log(a==10); -->
-	<!-- console.log(a==b); -->
+	var a=10,
+		b=5,
+		c=10,
+		d="5";
+		f="five"
+	console.log(a==10);
+	console.log(a==b);
 	
-	<!-- console.log(b==d); -->
-	<!-- console.log(b===d); -->
-	<!-- console.log(b===f); -->
+	console.log(b==d);
+	console.log(b===d);
+	console.log(b===f);
 	
-	<!-- console.log(a!=b); -->
-	<!-- console.log(a!==d); -->
+	console.log(a!=b);
+	console.log(a!==d);
 	
-	<!-- console.log(a<20); -->
-	<!-- console.log(a>20); -->
-	<!-- console.log(a<=10); -->
-	<!-- console.log(a>=20); -->
+	console.log(a<20);
+	console.log(a>20);
+	console.log(a<=10);
+	console.log(a>=20);
 	
-	<!-- let i=17,j=20; -->
-	<!-- let num=i>j ? "eligible":"not eligible" -->
-	<!-- console.log(num) -->
-	
+	var i=17,j=20;
+	var num=i>j ? "eligible":"not eligible"
+	console.log(num)
+	 <!-- --> -->
 		//Logical operator
 		
-	let a=5,
-		b=9,
-		c=2,
-		d=5;
-	console.log(a>c && d>c);
-	console.log(a<c || d<c);
-	console.log(a<c ! d<c);
+	let x=6;
+	
+	if (x%2==0 && x%5==0){
+		console.log("a");
+	}
+	else{
+		console.log("b");
+	}
+	
+	if (x%2==0 || x%5==0){
+		console.log("c");
+	}
+	else{
+		console.log("d");
+	}
+	
+	if (x%2 !== x%5){
+		console.log("e");
+	}
+	else{
+		console.log("f");
+	}
 	
 </script>
 
