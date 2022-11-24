@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array types</title>
+</head>
+<body>
+
+    <script>
+        //concat
+        let volgers1=["Herat racer","Twin Throttlers","pyros girl","charry volgs"];
+        let volgers2=["time traveler arun","mr arun vijy"];
+        let bike=volgers1.concat(volgers2);
+        document.write(bike+"<br>");
+		
+        //length
+        document.write("length"+" "+ bike.length);
+        document.write("<br>");
+		
+        //push
+        let bike1=["BMW","VR15","MT15","ROYAL ENFILD"];
+        let b=bike1.push("RX100");
+        document.write("push" + "<br>" +bike1);
+        document.write("<br>");
+		
+        //unshift
+        let bike2=["BMW","VR15","MT15","ROYAL ENFILD"];
+        let b1=bike2.unshift("RX100");
+        document.write("unshift" + "<br>" +bike2);
+        document.write("<br>");
+   
+		//reverse
+        let n=[1,2,3,4,5];
+        let n1=n.reverse();
+        document.write(n1);
+        document.write("<br>");
+        
+		//shift
+        let s=[1,2,3,4,5];
+        let s1=s.shift();
+        console.log(s1);
+        document.write("<br>");
+        
+		//pop
+		let p=[1,2,3,4,5];
+        let p1=p.pop();
+        document.write(p1);
+        document.write("<br>");
+        
+		//splice
+        let p2=[1,2,3,4,5];
+        let p3=p2.splice(2,0,"12");
+        document.write(p2);
+        document.write("<br>")
+        
+		//join
+        let volger1=["Herat racer","Twin Throttlers","pyros girl","charry volgs","time traveler arun","mr arun vijy"];
+        let bikes=volgers1.join("&");
+        document.write(bikes+"<br>");
+        
+		//slice
+        let vol=["Herat racer","Twin Throttlers","pyros girl","charry volgs","time traveler arun","mr arun vijy"];
+        let bies=vol.slice("2");
+        document.write(bies+"<br>");
+        
+		//fill
+        let f=[1,2,3,4,5];
+        let f1=f.fill("4",2,4);
+        document.write(f1);
+        document.write("<br>")
+        
+		//at
+        let name=["Herat racer","Twin Throttlers","pyros girl","charry volgs","time traveler arun","mr arun vijy"];
+        let nb=vol.at("2");
+        document.write(nb+"<br>");
+        
+		//copywithin
+        let cw=["Herat racer","Twin Throttlers","pyros girl","charry volgs","time traveler arun","mr arun vijy"];
+        let cb=cw.copyWithin(4,0);
+        document.write(cb+"<br>");
+        
+		//foreach
+        let feh=["Herat racer","Twin Throttlers","pyros girl","charry volgs","time traveler arun","mr arun vijy"];
+        let fe=feh.forEach("time traveler arun",1,3);
+        document.write(cb+"<br>");
+        
+		//includes
+        let fo=[1,2,3,4,5,6,7,8];
+        let fo1=fo.includes(4,3);
+        document.write(fo1+"<br>")
+        
+		//indexof
+        let ind=[1,2,3,4,5,6,7,8];
+        let in1=ind.indexOf(5,4);
+        document.write(in1+"<br>")
+        
+		//sort
+        let so=[1900,72,23,94,75,56,17,88];
+        let so1=so.sort();
+        document.write(so1+"<br>")
+        
+		//findindex of
+        let ln=[20,10,25,15];
+        let ln1=ln.findIndex(in2);
+        document.write(ln1+"<br>")
+        function in2( last){
+            return last>10;
+        }
+        
+		//map
+        let m=[20,10,25,15];
+        let m1=m.map(mm);
+        document.write(m1+"<br>")
+         function mm( lasts){
+            return lasts*10;
+        }
+        
+		//reduse
+        let r=[200,10,25,15];
+        let r1=r.reduce(re);
+        document.write(r1+"<br>")
+         function re( las,num){
+            return las-num;
+         }
+        
+		//lastindexof
+		let la=["Herat racer","Twin Throttlers","pyros girl","charry volgs","time traveler arun","mr arun vijy"];
+        let las=la.lastIndexOf("time traveler arun");
+        document.write(las+"<br>");
+
+
+    </script>
+    
+</body>
+</html>
