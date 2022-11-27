@@ -8,12 +8,26 @@
 </head>
 <body>
 <script>
-   let value=[20,30,35,22,15];
-	let values=value.forEach(mynew)
-	  document.write(values);
-	 function mynew(item,index,array){
-	   array[index]=item*10;
-	 }   
+	let value=[20,30,35,22,15];
+		value.forEach(function(num){
+			console.log(num);       //value eduka
+		});
+	 
+	let val=[20,30,35,22,15];
+		val.forEach(function(num,index){
+			console.log(num,index);       //value and index eduka
+		});
+	 
+	 
+	 
+	let va=[20,30,35,22,15];
+		va.forEach((num,index)=>{		//using arrow function
+			console.log(num,index);       //value and index eduka
+		});
+		
+		
+	var gopi=[11,22,33,44,55,66,77];
+		console.log(gopi.reverse());   //reverse
 </script>
 </body>
 </html>
