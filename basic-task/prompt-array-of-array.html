@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>prompt array of array value</title>
+</head>
+<body>
+
+<script>
+	
+	var a=prompt("Enter the value");
+	var b=[];
+	var c;
+	for(i=0;i<a;i++){
+		c=[];
+		d=prompt("inner loop ");
+		for(j=0;j<d;j++){
+			e=prompt("inner value");
+			c[j]=e;
+		};
+		b[i]=c;
+	};
+	console.log(b);
+	
+</script>
+</body>
+</html>
