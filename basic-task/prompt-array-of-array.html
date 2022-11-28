@@ -9,19 +9,41 @@
 <body>
 
 <script>
-	
-	var a=prompt("Enter the value");
+			//[[1,2,3],[4,2,1],[9,7,4]]
+			//a la kudukura value thaan evulavu array ulla vaikanum nu paakum
+			
+	<!-- var a=prompt("Enter the Number"); -->
+	<!-- var b=[]; -->
+
+	<!-- for(i=0;i<a;i++){ -->
+		<!-- var c=[]; -->
+		<!-- d=prompt("create inner array"); -->
+		<!-- for(j=0;j<d;j++){ -->
+			<!-- e=prompt("inner array value"); -->
+			<!-- c[j]=e; -->
+		<!-- }; -->
+		<!-- b[i]=c; -->
+	<!-- }; -->
+	<!-- console.log(b); -->
+					
+					
+					//function using 
+					
+	var a=prompt("Enter the Number");
 	var b=[];
-	var c;
-	for(i=0;i<a;i++){
-		c=[];
-		d=prompt("inner loop ");
-		for(j=0;j<d;j++){
-			e=prompt("inner value");
-			c[j]=e;
+	function arrayfun(){
+		for(i=0;i<a;i++){
+			var c=[];
+			d=prompt("create inner array");
+			for(j=0;j<d;j++){
+				e=prompt("inner array value");
+				c[j]=e;
+			};
+			b[i]=c;
 		};
-		b[i]=c;
+		return b;
 	};
+	arrayfun();
 	console.log(b);
 	
 </script>
