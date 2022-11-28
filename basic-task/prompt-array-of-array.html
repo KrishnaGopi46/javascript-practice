@@ -31,20 +31,24 @@
 					
 	var a=prompt("Enter the Number");
 	var b=[];
-	function arrayfun(){
+	let c;
 		for(i=0;i<a;i++){
-			var c=[];
-			d=prompt("create inner array");
-			for(j=0;j<d;j++){
-				e=prompt("inner array value");
-				c[j]=e;
-			};
-			b[i]=c;
+			c=[];
+			var d=prompt("create inner array");
+			var k=arrayname(d);
+			
+			b[i]=k;
 		};
-		return b;
+		console.log(b);
+	
+	
+	function arrayname(gopi){
+		for(j=0;j<gopi;j++){
+				c[j]=prompt("inner array value");
+		}
+		return c;
 	};
-	arrayfun();
-	console.log(b);
+	
 	
 </script>
 </body>
