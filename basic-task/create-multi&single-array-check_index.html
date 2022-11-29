@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>creat multi and single array check index and value</title>
+</head>
+<body>
+
+<script>
+		//[[1,2,3,5],[5,3,2],3,[8,9,5],7,[5,3,1]]
+		//single value aah iruntha array aah consider panna kudathu
+	
+	function arrayname(g){
+	var b=[];
+	var c;
+	for(i=0;i<g;i++){
+		d=parseInt(prompt("create inner array"));
+			if(d==0){
+				d=parseInt(prompt("create single array"));
+				b[i]=d;
+			}
+			else{
+				c=[];
+				for(j=0;j<d;j++){
+				e=parseInt(prompt("inner array value"));
+				c[j]=e;
+			}
+			b[i]=c;
+			}
+	}
+	return b;
+	};
+	
+	function funname(one){
+	if(x < f.length){
+		if(typeof f[one]=='number'){
+			t=(f[one]);
+			return t;
+		}
+		else{
+			if(typeof f[one]=='object'){
+				var y=parseInt(prompt("Enter the check index"));
+				q=f[one][y];
+				return q;
+			}
+		}
+	}
+	};
+	
+	
+		
+	var a=parseInt(prompt("Enter the Number"));
+	var f=arrayname(a);
+	console.log(f);
+	
+	var x=parseInt(prompt("Enter the check index"));
+	var second=funname(x);
+	console.log(second);
+	
+	
+</script>
+</body>
+</html>

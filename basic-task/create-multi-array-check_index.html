@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>creat multi array check index and value</title>
+</head>
+<body>
+
+<script>
+			//[[1,2,3],[4,2,1],[9,7,4]]
+			//a la kudukura value thaan evulavu array ulla vaikanum nu paakum
+			
+	var a=prompt("Enter the Number");
+	
+	var result=arrayname(a);
+	console.log(result);
+	
+	
+	
+	
+	
+	function arrayname(pass){
+	var b=[];
+	for(i=0;i<pass;i++){
+		var c=[];
+		d=prompt("create inner array");
+		for(j=0;j<d;j++){
+			e=prompt("Enter inner array value");
+			c[j]=e;
+		};
+		b[i]=c;
+	};
+	return b;
+	};
+	
+	
+	var x=parseInt(prompt("Enter the check index"));
+	var y=parseInt(prompt("Enter the check index"));
+	var second=funname(x,y);
+	console.log(second);
+	
+	
+	function funname(one,two){
+	if (one < result.length){
+		var t=(result[one][two]);
+	}
+	else{
+		console.log("This index is not defined");
+	}
+	return t;
+	};
+
+</script>
+</body>
+</html>
