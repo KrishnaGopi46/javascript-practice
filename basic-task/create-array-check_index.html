@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>create array check index</title>
+</head>
+<body>
+
+<script>
+			//[[1,2,3],[4,2,1],[9,7,4]]
+			//a la kudukura value thaan evulavu array ulla vaikanum nu paakum
+			
+	var a=prompt("Enter the array length");
+	
+	
+	var result=arrayname(a);
+	console.log(result);
+	
+	function arrayname(pass){
+	var b=[];
+	for(i=0;i<pass;i++){
+		c=prompt("Enter the array value");
+		b[i]=c;
+	};
+	return b;
+	};
+	
+	
+	var check=parseInt(prompt("Enter the check index"));
+	if (result[check]<result.length){
+		console.log(result[check]);
+	}
+	else{
+		console.log("This index is not defined");
+	};
+	
+	
+</script>
+</body>
+</html>

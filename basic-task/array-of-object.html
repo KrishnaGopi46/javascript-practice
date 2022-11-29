@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array of object</title>
+</head>
+<body>
+
+<script>
+	
+	<!-- var a=parseInt(prompt("Enter the Number")); -->
+	<!-- var b=[]; -->
+	<!-- var c; -->
+	
+	<!-- for(i=0;i<a;i++){ -->
+		<!-- c={}; -->
+		<!-- d=parseInt(prompt("create inner array")); -->
+		<!-- for(j=0;j<d;j++){ -->
+			<!-- e=parseInt(prompt("inner array value")); -->
+			<!-- f=parseInt(prompt("inner array value")); -->
+			<!-- var x=e; -->
+			<!-- var y=f; -->
+			<!-- var z=(e + ":" + f); -->
+			<!-- c[j]=z; -->
+		<!-- }; -->
+		<!-- b[i]=c; -->
+	<!-- }; -->
+	<!-- console.log(b); -->
+	
+	
+	
+	
+	var a=prompt("Enter the Number");
+	var result=myfun(a);
+	console.log(result);
+	
+	
+	function myfun(pass){
+	var b=[];
+	for(i=0;i<pass;i++){
+		var c={
+			Name:"name",
+			Age:"age",
+			Degree:"degree",
+		};
+		
+		e=prompt("enter the name");
+		c.Name=e;
+		f=prompt("enter the age");
+		c.Age=f;
+		g=prompt("enter the degree");
+		c.Degree=g;
+		b[i]=c;
+	};
+	return b;
+	};
+	
+</script>
+</body>
+</html>
