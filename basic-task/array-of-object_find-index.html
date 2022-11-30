@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array of object find index</title>
+</head>
+<body>
+
+<script>
+	
+
+	
+	var a=prompt("Enter the Number");
+	var result=myfun(a);
+	console.log(result);
+	
+		
+	function myfun(pass){
+	var b=[];
+	for(i=0;i<pass;i++){
+		var c={
+			Name:"name",
+			Age:"age",
+			Degree:"degree",
+		};
+		
+		e=prompt("enter the name");
+		c.Name=e;
+		f=prompt("enter the age");
+		c.Age=f;
+		g=prompt("enter the degree");
+		c.Degree=g;
+		b[i]=c;
+	};
+	return b;
+	};
+	
+	
+	
+	
+	function funname(one,two){
+	if (one < result.length){
+		var t=result[one];
+	}
+	else{
+		console.log("This index is not defined");
+	}
+	return t;
+	};
+	
+	
+	var x=parseInt(prompt("Enter the check index"));
+	var y=parseInt(prompt("Enter the key value"));
+	var second=funname(x,y);
+	console.log(second);
+	
+	
+	
+</script>
+</body>
+</html>
