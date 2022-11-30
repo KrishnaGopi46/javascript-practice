@@ -37,12 +37,18 @@
 	if(x < f.length){
 		if(typeof f[one]=='number'){
 			t=(f[one]);
+			yy=parseInt(prompt("Enter the inner index"));
+			var t=yy;
+			f[one]=t;
 			return t;
 		}
 		else{
-			var y=parseInt(prompt("Enter the check index"));
+			var y=parseInt(prompt("Enter the inner index"));
 				if(y<f.length){
 					q=f[one][y];
+					xx=parseInt(prompt("Enter the inner index"));
+					var q=xx;
+					f[one][y]=q;
 					return q;
 				}
 				else{
