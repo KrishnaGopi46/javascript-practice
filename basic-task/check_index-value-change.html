@@ -37,12 +37,16 @@
 	if(x < f.length){
 		if(typeof f[one]=='number'){
 			t=(f[one]);
+			aa=parseInt(prompt("Enter the check index"));
+			f[one]=aa;
 			return t;
 		}
 		else{
 			if(typeof f[one]=='object'){
 				var y=parseInt(prompt("Enter the check index"));
 				q=f[one][y];
+				bb=parseInt(prompt("Enter the check index"));
+				f[one][y]=bb;
 				return q;
 			}
 		}
@@ -58,7 +62,7 @@
 	
 	var x=parseInt(prompt("Enter the check index"));
 	var second=funname(x);
-	console.log(second);
+	console.log(f);
 	
 	
 </script>
