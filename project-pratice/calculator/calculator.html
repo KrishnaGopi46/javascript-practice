@@ -14,27 +14,26 @@
         <div class="content">
             <input type="text" placeholder="0" id="display">
             <div class="content1">
-                <button onclick="">AC</button>
-                <button onclick="">DEL</button>
-                <button onclick="">%</button>
-                <button onclick="">/</button>
-                <button onclick="">7</button>
-                <button onclick="">8</button>
-                <button onclick="">9</button>
-                <button onclick="">x</button>
-                <button onclick="">4</button>
-                <button onclick="">5</button>
-                <button onclick="">6</button>
-                <button onclick="">-</button>
-                <button onclick="">1</button>
-                <button onclick="">2</button>
-                <button onclick="">3</button>
-                <button onclick="">+</button>
-                <button onclick="">0</button>
-				<button onclick="">00</button>
-                <button onclick="">.</button>
-                <button onclick="">=</button>
-              
+                <button onclick="number('AC')">AC</button>
+                <button onclick="number('DEL')">DEL</button>
+                <button onclick="number('%')">%</button>
+                <button onclick="number('/')">/</button>
+                <button onclick="number(7)">7</button>
+                <button onclick="number(8)">8</button>
+                <button onclick="number(9)">9</button>
+                <button onclick="number('*')">x</button>
+                <button onclick="number(4)">4</button>
+                <button onclick="number(5)">5</button>
+                <button onclick="number(6)">6</button>
+                <button onclick="number('-')">-</button>
+                <button onclick="number(1)">1</button>
+                <button onclick="number(2)">2</button>
+                <button onclick="number(3)">3</button>
+                <button onclick="number('+')">+</button>
+                <button onclick="number(0)">0</button>
+				<button onclick="number(00)">00</button>
+                <button onclick="number('.')">.</button>
+                <button onclick="number('=')">=</button>
             </div>
         </div>
     </div>
@@ -43,9 +42,22 @@
 	<script>
 		let output=document.getElementById("display");
 		
-		function fin(num){
-			output.value += num;
+		let number=(calc)=>{
+			output.value+=calc;
 		}
+		
+			
+		
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
 	</script>
 
 </body>
