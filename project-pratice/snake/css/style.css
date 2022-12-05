@@ -1,0 +1,26 @@
+
+.n-box{
+	border:1px solid white;
+	padding:44px;
+	background-color:pink;
+}
+.content1{
+	height:90vh;
+	width:80%;
+	display:flex;
+	flex-wrap:wrap;
+	margin:auto;
+}
+.50-box{
+	position:relative;
+}
+.home{
+	position:absolute;
+	top:5%;
+	right:14%;
+}
+.flag{
+	position:absolute;
+	top:79%;
+	left:13%;
+}
