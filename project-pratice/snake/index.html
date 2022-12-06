@@ -8,75 +8,79 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<section class="main">
-    <div class="container">
-		<div class="content1">
-			<div class="n-box">41</div>
-			<div class="n-box">42</div>
-			<div class="n-box">43</div>
-			<div class="n-box">44</div>
-			<div class="n-box">45</div>
-			<div class="n-box">46</div>
-			<div class="n-box">47</div>
-			<div class="n-box">48</div>
-			<div class="n-box">49</div>
-			<div class="n-box 50-box" style="color:pink">50</div>
-			<div class="n-box">40</div>
-			<div class="n-box">39</div>
-			<div class="n-box">38</div>
-			<div class="n-box">37</div>
-			<div class="n-box">36</div>
-			<div class="n-box">35</div>
-			<div class="n-box">34</div>
-			<div class="n-box">33</div>
-			<div class="n-box">32</div>
-			<div class="n-box">31</div>
-			<div class="n-box">21</div>
-			<div class="n-box">22</div>
-			<div class="n-box">23</div>
-			<div class="n-box">24</div>
-			<div class="n-box">25</div>
-			<div class="n-box">26</div>
-			<div class="n-box">27</div>
-			<div class="n-box">28</div>
-			<div class="n-box">29</div>
-			<div class="n-box">30</div>
-			<div class="n-box">20</div>
-			<div class="n-box">19</div>
-			<div class="n-box">18</div>
-			<div class="n-box">17</div>
-			<div class="n-box">16</div>
-			<div class="n-box">15</div>
-			<div class="n-box">14</div>
-			<div class="n-box">13</div>
-			<div class="n-box">12</div>
-			<div class="n-box">11</div>
-			<div class="n-box" style="color:pink">01</div>
-			<div class="n-box">02</div>
-			<div class="n-box">03</div>
-			<div class="n-box">04</div>
-			<div class="n-box">05</div>
-			<div class="n-box">06</div>
-			<div class="n-box">07</div>
-			<div class="n-box">08</div>
-			<div class="n-box">09</div>
-			<div class="n-box">10</div>
-		</div>
-	</div>
+	<section>
+		<div class="box"></div>
+	</section>
+	
+	<button onclick="jump(5)">jump</button>
+	
+	
 	<div class="home">
-		<img src="image/home-remove.png" width="50px">
+		<img src="image/home-remove.png" width="40px">
 	</div>
 	<div class="flag">
-		<img src="image/flag.png" width="50px">
+		<img src="image/flag.png" width="40px">
 	</div>
 	<div class="snake1">
-		<img src="image/snake.png" width="350px">
+		<img src="image/snake.png" width="250px">
 	</div>
-</section>
-
-
-    <script>
-        
+	<div class="snake2">
+		<img src="image/snake2.png" width="250px">
+	</div>
+	<div class="snake3">
+		<img src="image/snake4.png" width="150px">
+	</div>
+	
+	
+	
+	<script>
+        function createBoxes(){
+            var boxes="";
+        for(let i=0;i<10;i++){
+            for(let j=0;j<10;j++){
+            y=(9-i)*50;
+            x=j*50;
+            if( (i+j)%2==0)
+            {
+                bg="white";
+            }
+            else{
+                bg="orange";
+            }
+            
+            if(i%2==0){
+                n=i*10+j+1;
+            }
+            else{
+                n=i*10+(10-j);
+            }
+            boxes+= `<div class='box' style='margin:${y}px ${x}px;background:${bg};'>${n}</div>`;
+            }
+        }
+        document.querySelector("section").innerHTML=boxes;
+        }
+        createBoxes();
+		
+		
+		
+		bs= document.querySelectorAll(".box");
+        start=1;
+        function jump(step){
+            stop=step+start;
+            play=setInterval(() =>{
+             if(start!=1){
+                bs[start-2].innerHTML=`${start-1}`;
+             }
+             bs[start-1].innerHTML=`<button>${start}</button>`
+             if(start<stop){
+                start++;
+             }
+             else{
+                clearInterval(play);
+             }
+            },1000);
+        }
     </script>
+
 </body>
 </html>
