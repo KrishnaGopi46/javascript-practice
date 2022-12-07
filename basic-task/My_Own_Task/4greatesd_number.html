@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
+    <title>find 4 greatest number</title>
+</head>
+<body>
+
+
+<script>
+
+	a=prompt("Enter the number A");
+	b=prompt("Enter the number B");
+	c=prompt("Enter the number C");
+	d=prompt("Enter the number D");
+	
+	if(a>b){
+		if(a>c){
+			if(a>d){
+				console.log(b,c,d,a);
+			}
+			else{
+				console.log(b,c,a,d);
+			}
+		}
+		else{
+			if(c>d){
+				console.log("c is greater"+c);
+			}
+			else{
+				console.log("d is greater"+d);
+			}
+		}
+	}
+	else{
+		if(b>c){
+			if(b>d){
+				console.log("b is greater"+b);
+			}
+			else{
+				console.log("d is greater"+d);
+			}
+		}
+		else{
+			if(c>d){
+				console.log("c is greater"+c);
+			}
+			else{
+				console.log("d is greater"+d);
+			}
+		}
+	}
+	
+
+
+	
+</script>
+
+
+
+</body>
+</html>
