@@ -30,7 +30,7 @@
 	
 	//-------promise-------
 	
-	let count=false;
+	let count=true;
 	
 	let mycall = new Promise(function(myResolve, myReject){
 		if(count){
@@ -39,8 +39,12 @@
 		else{
 			myReject("error")
 		}
-	});
-	mycall.catch(function successful(result){
+	})
+	
+	mycall.then(function successful(result){
+	console.log(result);
+	})
+	.catch(function successful(result){
 	console.log(result);
 	});
 	
