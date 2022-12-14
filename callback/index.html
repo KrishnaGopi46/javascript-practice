@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back</title>
+</head>
+<body>
+    
+<script>
+
+	//------call back------------
+	
+	function myDisplayer() {
+		console.log("hello");
+	}
+
+	function myFirst() {
+	  myDisplayer("Hello");
+	}
+
+	function mySecond() {
+	  myDisplayer("Goodbye");
+	}
+
+	mySecond();
+	myFirst()
+	
+	
+	//-------promise-------
+	
+	let count=false;
+	
+	let mycall = new Promise(function(myResolve, myReject){
+		if(count){
+			myResolve("sucess")
+		}
+		else{
+			myReject("error")
+		}
+	});
+	mycall.catch(function successful(result){
+	console.log(result);
+	});
+	
+	
+	
+</script>
+
+
+</body>
+</html>
