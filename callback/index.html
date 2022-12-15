@@ -10,46 +10,167 @@
     
 <script>
 
-	//------call back------------
+	<!-- //------call back------------ -->
 	
-	function myDisplayer() {
-		console.log("hello");
+	<!-- function myDisplayer() { -->
+		<!-- console.log("hello"); -->
+	<!-- } -->
+
+	<!-- function myFirst() { -->
+	  <!-- myDisplayer("Hello"); -->
+	<!-- } -->
+
+	<!-- function mySecond() { -->
+	  <!-- myDisplayer("Goodbye"); -->
+	  <!-- console.log("gopi"); -->
+	<!-- } -->
+
+	<!-- mySecond(); -->
+	<!-- myFirst() -->
+	
+	
+	<!-- //-------promise------- -->
+	
+	<!-- let count=true; -->
+	
+	<!-- let mycall = new Promise(function(myResolve, myReject){ -->
+		<!-- if(count){ -->
+			<!-- myResolve("sucess") -->
+		<!-- } -->
+		<!-- else{ -->
+			<!-- myReject("error") -->
+		<!-- } -->
+	<!-- }) -->
+	
+	<!-- mycall.then(function successful(result){ -->
+		<!-- console.log(result); -->
+	<!-- }) -->
+	<!-- .catch(function successful(result){ -->
+	<!-- console.log(result); -->
+	<!-- }); -->
+	
+	
+	 <!-- //callback hell -->
+    <!-- function first(){ -->
+    <!-- let main=new Promise( -->
+        <!-- function(resolve,reject){ -->
+            <!-- setTimeout(() => { -->
+                <!-- resolve("Success") -->
+                <!-- second() -->
+            <!-- }, 3000); -->
+        <!-- } -->
+    <!-- ).then(function(resval){ -->
+        <!-- console.log("Success") -->
+        <!-- second() -->
+    <!-- }) -->
+	<!-- } -->
+    <!-- function second(){ -->
+    <!-- let main2=new Promise( -->
+        <!-- function(resolve,reject){ -->
+            <!-- setTimeout(() => { -->
+                <!-- reject("Failure") -->
+            <!-- }, 1000); -->
+        <!-- } -->
+    <!-- ).then(function(rejval){ -->
+        <!-- console.log("Failure") -->
+    <!-- }) -->
+    <!-- } -->
+    <!-- first() -->
+
+
+
+
+    //Promise chaining
+	function main(){
+		return new Promise(function(resolve,reject){
+			setTimeout(function(){
+				resolve("success") 
+			}, 2000);
+		})
 	}
 
-	function myFirst() {
-	  myDisplayer("Hello");
+	function main1(res){
+		console.log("res",res);
+		return new Promise(function(resolve,reject){
+			setTimeout(function(){
+				resolve("failure")
+			}, 1000);
+		})
 	}
-
-	function mySecond() {
-	  myDisplayer("Goodbye");
+	function main2(res1){
+		console.log("res",res1);
+		return new Promise(function(resolve,reject){
+			setTimeout(function(){
+				resolve("failure")
+			}, 1000);
+		})
 	}
+	
+	main()
+		.then(main1)
+		.then(main2)
+		.then(function(res1){
+			console.log(res1);
+		})
+		.catch(function(err){
+			console.log(err);
+		})
 
-	mySecond();
-	myFirst()
-	
-	
-	//-------promise-------
-	
-	let count=true;
-	
-	let mycall = new Promise(function(myResolve, myReject){
-		if(count){
-			myResolve("sucess")
-		}
-		else{
-			myReject("error")
-		}
-	})
-	
-	mycall.then(function successful(result){
-	console.log(result);
-	})
-	.catch(function successful(result){
-	console.log(result);
-	});
-	
-	
-	
+
+    //Promise all
+    <!-- function main(){ -->
+		<!-- return new Promise(function(resolve,reject){ -->
+			<!-- setTimeout(function(){ -->
+				<!-- resolve("success")  -->
+			<!-- }, 2000); -->
+		<!-- }) -->
+	<!-- } -->
+
+	<!-- function main1(res){ -->
+		<!-- console.log(res); -->
+		<!-- return new Promise(function(resolve,reject){ -->
+			<!-- setTimeout(function(){ -->
+				<!-- resolve ("failure") -->
+			<!-- }, 1000); -->
+		<!-- }) -->
+	<!-- } -->
+
+	<!-- Promise.all([main(),main1()]) -->
+		<!-- .then(function(success){ -->
+			<!-- console.log(success); -->
+		<!-- }) -->
+		<!-- .catch(function(err){ -->
+			<!-- console.log(err); -->
+		<!-- }) -->
+
+
+
+
+<!-- //Async and await -->
+	<!-- function main(){ -->
+		<!-- return new Promise(function(resolve,reject){ -->
+			<!-- setTimeout(() => { -->
+			<!-- resolve("success")  -->
+			<!-- }, 2000); -->
+		<!-- }) -->
+	<!-- } -->
+
+	<!-- function main1(res){ -->
+		<!-- console.log(res); -->
+		<!-- return new Promise(function(resolve,reject){ -->
+			<!-- setTimeout(() => { -->
+				<!-- resolve("failure") -->
+			<!-- }, 1000); -->
+		<!-- }) -->
+	<!-- } -->
+    
+	<!-- async function Parent(){ -->
+        <!-- let res1=await main() -->
+        <!-- let res2=await main1() -->
+        <!-- console.log(res1,res2); -->
+    <!-- } -->
+    <!-- Parent() -->
+
 </script>
 
 
