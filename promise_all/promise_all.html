@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise all</title>
+</head>
+<body>
+    
+<script>
+		
+		//promise all la argunent ta pass panna mudiyathu
+		//parallel aah run aakum
+		//onnu fail naalum .catch ku poirum
+	
+	function main(){
+		return new Promise(function(resolve,reject){
+			setTimeout(function(){
+				resolve("success1") 
+			}, 3000);
+		})
+	}
+	
+	function main1(){
+		return new Promise(function(resolve,reject){
+			setTimeout(function(){
+				resolve("success2") 
+			}, 4000);
+		})
+	}
+
+	function main2(){
+		return new Promise(function(resolve,reject){
+			setTimeout(function(){
+				resolve("success3") 
+			}, 1000);
+		})
+	}
+
+	
+	Promise.all([main(),main1(),main2()])
+	.then(function(res){
+		console.log(res);
+	})
+	.catch(function(err){
+		console.log("error "+err);
+	})
+
+
+</script>
+
+</body>
+</html>

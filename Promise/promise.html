@@ -10,16 +10,22 @@
     
 <script>
 
-	let promise=new promise(resolve,reject){
-		setTimeout(function(){
-			resolve("sucess");
-		),1000};
+		//call back hell la prevent panna thaan promise method kondu vanthanga
+		
+	function main(){
+		return new Promise(function(resolve,reject){
+			setTimeout(function(){
+				reject("success") 
+			}, 2000);
+		})
 	}
-	.then(function(promise){
-		console.log(promise);
+
+	main()
+	.then(function(res){
+		console.log(res);
 	})
 	.catch(function(err){
-		console.log(err);
+		console.log("error "+err);
 	})
 
 

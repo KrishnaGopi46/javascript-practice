@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise chain</title>
+</head>
+<body>
+    
+<script>
+		//argument pass pnnalam
+		//onnu onnu naa thaa run aakum
+		//onnu pass innum onnu fail naa first irukathu output varum next irukathu varathu
+	
+	function main(){
+		return new Promise(function(resolve,reject){
+			setTimeout(function(){
+				resolve("success1") 
+			}, 2000);
+		})
+	}
+	
+	function main1(res){
+		console.log("res",res);
+		return new Promise(function(resolve,reject){
+			setTimeout(function(){
+				resolve("success2") 
+			}, 2000);
+		})
+	}
+	
+	function main2(res1){
+		console.log("res",res1);
+		return new Promise(function(resolve,reject){
+			setTimeout(function(){
+				reject("success3") 
+			}, 2000);
+		})
+	}
+	
+					//second method
+					
+	main()
+	.then(main1)
+	.then(main2)
+	.then(function(res){
+		console.log(res);
+	})
+	.catch(function(err){
+		console.log("error "+err);
+	})
+	
+
+			//first method
+	
+/*
+	main()													//1st function call
+	.then(function(res){
+		console.log(res);
+			main1()											//2nd function call
+			.then(function(res1){
+				console.log(res1);
+					main2()									//3rd function call
+					.then(function(res1){
+						console.log(res1);
+					})
+					.catch(function(res1){
+						console.log("error "+res1);
+					})
+			})
+			.catch(function(res1){
+				console.log("error "+res1);
+			})
+	})
+	.catch(function(err){
+		console.log("error "+err);
+	})
+*/
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await</title>
+</head>
+<body>
+    
+<script>
+
+	
+	function main(){
+		return new Promise(function(resolve,reject){
+			setTimeout(function(){
+				resolve("success1") 
+			}, 1000);
+		})
+	}
+	
+	function main1(){
+		return new Promise(function(resolve,reject){
+			setTimeout(function(){
+				resolve("success2") 
+			}, 1000);
+		})
+	}
+	
+	function main2(){
+		return new Promise(function(resolve,reject){
+			setTimeout(function(){
+				reject("success2") 
+			}, 1000);
+		})
+	}
+	
+	async function parent(){
+		try{
+			var result1=await main();
+			var result2=await main1();
+			var result3=await main2();
+			console.log(result1,result2,result3);
+		}
+		catch(err){
+			console.log("Error"+ result1,result2,result3);
+		}
+	}
+	parent()
+
+</script>
+
+</body>
+</html>
